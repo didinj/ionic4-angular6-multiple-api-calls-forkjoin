@@ -25,7 +25,7 @@ export class HomePage {
       message: 'Please wait...',
     });
     await loading.present();
-    await this.api.getData()
+    this.api.getData()
       .subscribe(res => {
         console.log(res);
         this.data1 = res[0];
